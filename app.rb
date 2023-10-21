@@ -53,7 +53,7 @@ get("/dice/5/4") do
   erb(:five_four)
 end
 
-get("dynamic/:number_of_dice/:how_many_sides") do
+get("/dice/:number_of_dice/:how_many_sides") do
   @num_dice = params["number_of_dice"].to_i
   @num_sides = params["how_many_sides"].to_i
   @rolls = []
